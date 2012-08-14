@@ -1,0 +1,5 @@
+# SCons hashes
+/.sconsign.dblite
+
+# build directory
+/build
