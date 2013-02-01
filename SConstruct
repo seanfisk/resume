@@ -2,7 +2,7 @@
 # SCons build file
 
 import os
-from subprocess import check_call, check_output
+import subprocess
 from tempfile import TemporaryFile
 import shutil
 
@@ -10,7 +10,9 @@ RESUME_PDF_NAME = 'resume.pdf'
 
 
 def git_current_branch():
-    git_branch_output = check_output(['git', 'branch'])
+    git_branch_output = subprocess.Popen(
+        ['git', 'branch'],
+        stdout=subprocess.PIPE).communicate()[0]
     branches = git_branch_output.splitlines()
     current_branch = filter(lambda b: b.startswith('*'),
                             branches)[0].split(' ')[1]
@@ -22,14 +24,14 @@ def upload_to_gh_pages(target, source, env):
     with TemporaryFile() as temp_file:
         with open(RESUME_PDF_NAME) as pdf_file:
             shutil.copyfileobj(pdf_file, temp_file)
-        check_call(['git', 'checkout', 'gh-pages'])
+        subprocess.check_call(['git', 'checkout', 'gh-pages'])
         temp_file.seek(0)
         with open(RESUME_PDF_NAME, 'w') as pdf_file:
             shutil.copyfileobj(temp_file, pdf_file)
-    check_call(['git', 'add', RESUME_PDF_NAME])
-    check_call(['git', 'commit', '-m', 'Updated resume.'])
-    check_call(['git', 'push', 'origin', 'gh-pages'])
-    check_call(['git', 'checkout', current_branch])
+    subprocess.check_call(['git', 'add', RESUME_PDF_NAME])
+    subprocess.check_call(['git', 'commit', '-m', 'Updated resume.'])
+    subprocess.check_call(['git', 'push', 'origin', 'gh-pages'])
+    subprocess.check_call(['git', 'checkout', current_branch])
     return 0
 
 env = Environment()
