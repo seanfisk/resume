@@ -1,9 +1,9 @@
 ===========
- My Resume
+ My Résumé
 ===========
 
-This is the source code for my resume, written in LaTeX. The only
-dependency is tucv_, a resume template. First install that
+This is the source code for my résumé, written in LaTeX. The only
+dependency is tucv_, a résumé template. First install that
 dependency::
 
     tlmgr install tucv
