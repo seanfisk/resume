@@ -24,7 +24,7 @@ This uses some ``git`` trickery and I've only tested it on my Mac, so YMMV.
 
 If you don't want to bother with SCons, just run::
 
-    pdflatex resume.tex
+    lualatex resume.tex
 
 .. _tucv: http://www.ctan.org/pkg/tucv
 .. _SCons: http://scons.org/
