@@ -36,6 +36,13 @@ def upload_to_gh_pages(target, source, env):
 
 env = Environment()
 
+# Use LuaTeX instead of pdfTeX.
+env.Replace(PDFLATEX='lualatex')
+
+# Enable SyncTeX. This is personal, but I use it, and I would
+# recommend it to everybody.
+env.AppendUnique(PDFLATEXFLAGS='-synctex=1')
+
 # Look in standard directory ~/texmf for .sty files
 env['ENV']['TEXMFHOME'] = os.path.join(os.environ['HOME'], 'texmf')
 
