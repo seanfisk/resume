@@ -6,7 +6,7 @@ import subprocess
 from tempfile import TemporaryFile
 import shutil
 
-RESUME_PDF_NAME = 'resume.pdf'
+RESUME_PDF_NAME = 'sean-fisk-resume.pdf'
 
 
 def git_current_branch():
@@ -46,7 +46,7 @@ env.AppendUnique(PDFLATEXFLAGS='-synctex=1')
 # Look in standard directory ~/texmf for .sty files
 env['ENV']['TEXMFHOME'] = os.path.join(os.environ['HOME'], 'texmf')
 
-resume_pdf = env.PDF(target=RESUME_PDF_NAME, source='resume.tex')
+resume_pdf = env.PDF(target=RESUME_PDF_NAME, source='sean-fisk-resume.tex')
 Default(resume_pdf)
 
 env.Command('upload', [resume_pdf], upload_to_gh_pages)
