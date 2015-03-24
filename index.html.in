@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="@REDIRECT_DELAY@; url=@PDF_URL@">
+  <title>Sean Fisk's Résumé</title>
+</head>
+<body>
+  <p>Thanks for visiting my résumé!</p>
+  <p>You will be redirected to the <a href="@PDF_URL@">résumé PDF</a> in @REDIRECT_DELAY@ seconds…</p>
+</body>
+</html>

@@ -1,37 +1,17 @@
-# SCons hashes
-/.sconsign.dblite
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
-# LaTeX
-*.acr
-*.alg
-*.aux
-*.bbl
-*.blg
-*.dvi
-*.fdb_latexmk
-*.glg
-*.glo
-*.gls
-*.idx
-*.ilg
-*.ind
-*.ist
-*.lof
-*.log
-*.lot
-*.maf
-*.mtc
-*.mtc0
-*.nav
-*.nlo
-*.out
-*.pdfsync
-*.ps
-*.snm
-*.synctex.gz
-*.toc
-*.vrb
-*.xdy
+# Waf
+## Build dir
+/build/
+## Unpackaged waflib
+## It's dot-hidden on Unix-like system, but on Windows it is just
+## labelled as a hidden directory (no dot).
+/.waf*-*-*/
+/waf*-*-*/
+## Waf lockfile
+/.lock-waf*
 
-*.fls
-*.pdf
+# pyenv version files
+.python-version
