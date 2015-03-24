@@ -15,3 +15,6 @@ __pycache__/
 
 # pyenv version files
 .python-version
+
+# dropped by Emacs AUCTeX
+/auto/
