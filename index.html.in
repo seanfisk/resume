@@ -7,6 +7,6 @@
 </head>
 <body>
   <p>Thanks for visiting my résumé!</p>
-  <p>You will be redirected to the <a href="@PDF_URL@">résumé PDF</a> in @REDIRECT_DELAY@ seconds…</p>
+  <p>You will be redirected to the <a href="@PDF_URL@">PDF</a> in @REDIRECT_DELAY@ seconds…</p>
 </body>
 </html>
