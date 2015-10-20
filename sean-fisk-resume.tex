@@ -25,16 +25,21 @@
 % Just loading fontspec should cause LuaLaTeX to pick a font that can display most Unicode characters.
 \usepackage{fontspec}
 \usepackage{microtype}
-
 \usepackage[pagesetup]{tucv}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\newcommand{\mailtohref}[1]{\urlstyle{same}\href{mailto:#1}{\nolinkurl{#1}}}
+\newcommand{\telhref}[1]{\urlstyle{same}\href{tel:#1}{#1}}
+
 \fancyfoot[C]{Sean Fisk - Résumé \thepage}
 
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Sean Fisk} \\
-  7792 Aster Lane  & (616) 307-8222 \\
-  Jenison, MI 49428 & sean@seanfisk.com \\
+  7792 Aster Lane  & \telhref{+1.616.307.8222} \\
+  Jenison, MI 49428 & \mailtohref{sean@seanfisk.com} \\
 \end{tabular*}
 
 \resheading{Objective}
