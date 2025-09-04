@@ -1,24 +1,13 @@
-<!-- -*- coding: utf-8; -*- -->
+<!-- -*- coding: utf-8 -*- -->
 
-My Résumé
-=========
+# My Résumé
 
-This is the source code for my résumé, written in LaTeX. The only dependency is [tucv][], a résumé template. First install that dependency:
+This is the source code for my résumé, written in LaTeX. It is built upon [tucv][], a résumé template.
 
-    tlmgr install tucv
+First, install a LaTeX distribution, then run:
 
-Install the Python requirements:
+    bin/build
 
-    pip install -r requirements.txt
-
-Build and open with [Waf][]:
-
-    ./waf configure open
-
-And also upload to [GitHub Pages][] easily with:
-
-    ./waf upload
+The final PDF will be written to the `build/` directory.
 
 [tucv]: http://www.ctan.org/pkg/tucv
-[Waf]: https://code.google.com/p/waf/
-[GitHub Pages]: https://pages.github.com/
