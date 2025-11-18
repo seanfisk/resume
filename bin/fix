@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -o errexit
+set -o xtrace
+
+git ls-files | typos --file-list - --write-changes

@@ -4,4 +4,4 @@ set -o errexit
 set -o xtrace
 
 # Check spelling
-typos *.tex bin
+git ls-files | typos --file-list -
