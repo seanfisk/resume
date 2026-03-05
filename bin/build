@@ -4,4 +4,5 @@ set -o errexit
 set -o xtrace
 
 mkdir -p build
-exec latexmk -lualatex -output-directory=build sean-fisk-resume.tex
+
+PATH=/Library/TeX/texbin:"$PATH" exec latexmk -lualatex -output-directory=build sean-fisk-resume.tex
